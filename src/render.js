@@ -9,19 +9,26 @@ export async function render() {
 	const todos = todosData.todos;
 	let html = '';
 	for (const todo of todos) {
-		 html += `
+		//  Checkbox and Title
+		html += `
 		 	<div class="flex items-center bg-gray-50 rounded-lg shadow-sm p-4 mb-3 w-full max-w-md">
-		 		<input type="checkbox" id="toggleCheckbox-${todo.id}" class="mr-4 h-5 w-5 accent-blue-500" ${todo.isComplete ? 'checked' : ''} />
- 
-		 		<div class="flex flex-col flex-grow">
-		 			<span class="text-lg font-medium text-gray-800${todo.isComplete ? ' line-through' : ''}">${todo.title}</span>
-		 			<span class="text-sm text-gray-500 mt-1">Due: ${todo.dueDate}</span>
-		 		</div>
- 
-		 		<div class="flex space-x-2 ml-4">
-		 			<button id="editButton-${todo.id}" class="px-3 py-1 bg-blue-500 text-white font-bold rounded shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 transition" aria-label="Edit Todo">Edit</button>
- 
-		 			<button id="deleteButton-${todo.id}" class="px-3 py-1 bg-red-500 text-white font-bold rounded shadow hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-300 transition" aria-label="Delete Todo">Delete</button>
+		 		<input type="checkbox" id="toggleCheckbox-${todo.id}" class="mr-4 h-5 w-5 accent-blue-500" ${todo.isComplete ? 'checked' : ''} />`
+
+				// Due Date 
+		html += `	
+			<div class="flex flex-col flex-grow">
+		 		<span class="text-lg font-medium text-gray-800${todo.isComplete ? ' line-through' : ''}">${todo.title}</span>
+		 		<span class="text-sm text-gray-500 mt-1">Due: ${todo.dueDate}</span>
+		 	</div>`
+
+				// Edit Button
+		html += `
+		 	<div class="flex space-x-2 ml-4">
+		 		<button id="editButton-${todo.id}" class="px-3 py-1 bg-blue-500 text-white font-bold rounded shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 transition" aria-label="Edit Todo">Edit</button>`
+
+				//  Delete Button
+		html += `
+		 		<button id="deleteButton-${todo.id}" class="px-3 py-1 bg-red-500 text-white font-bold rounded shadow hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-300 transition" aria-label="Delete Todo">Delete</button>
 		 		</div>
 		 	</div>
 		 	`;

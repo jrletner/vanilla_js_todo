@@ -28,10 +28,9 @@ cd vanilla_js_todo
 npm install
 ```
 
-### 3. Install and start json-server
+### 3. Start json-server
 
 ```
-npm install
 npm run json-server
 ```
 

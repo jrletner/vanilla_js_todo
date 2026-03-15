@@ -1,0 +1,10 @@
+{
+  "todos": [
+    {
+      "id": "c86752ee-5ef4-4c10-8dde-9d1392558305",
+      "title": "tests",
+      "dueDate": "2026-03-18"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

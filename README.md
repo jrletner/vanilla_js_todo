@@ -31,7 +31,7 @@ npm install
 ### 3. Install and start json-server
 
 ```
-npm install -g json-server
+npm install
 npm run json-server
 ```
 
